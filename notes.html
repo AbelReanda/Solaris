@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>Solar</title>
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/style.css">
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/Chart.bundle.min.js"></script>
+	<script src="js/utils.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-md navbar-dark bg-dark" id="nav-st">
+	<a class="navbar-brand font-weight-bold" href="index.html"><i class="material-icons" style="font-size: 2em; width: 40px;">home e88a</i></a>
+	<button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation" >
+	<span class="material-icons" style="width: 24px;">menu e5d2</span>
+	</button>
+	<div class="collapse navbar-collapse" id="navbarColor02">
+		<ul class="navbar-nav mr-auto">
+			<li class="nav-item">
+				<div class="row no-gutters">
+					<div class="col" data-toggle="tooltip" title="" data-original-title="Notes">
+						<a class="nav-link text-center icon-efect" href="notes.html"><span class="material-icons" style="width: 24px;">event_note e616</span> <span class="sr-only">(current)</span></a>
+					</div>
+					<div class="col" data-toggle="tooltip" title="" data-original-title="Charts">
+						<a class="nav-link text-center icon-efect" href="charts.html"><span class="material-icons" style="width: 24px;">insert_chart e24b</span> <span class="sr-only">(current)</span></a>
+					</div>
+					<div class="col" data-toggle="tooltip" title="" data-original-title="Profile">
+					<a class="nav-link text-center icon-efect" href="profile.html"><span class="material-icons" style="width: 24px;">person e7fd</span> <span class="sr-only">(current)</span></a>
+					</div>
+					<div class="col" data-toggle="tooltip" title="" data-original-title="About">
+						<a class="nav-link text-center icon-efect" href="about.html"><span class="material-icons" style="width: 24px;">info e88e</span> <span class="sr-only">(current)</span></a>
+					</div>
+				</div>
+			</li>
+		</ul>
+		<form class="form-inline my-2 my-lg-0 position-relative" style="overflow: hidden;">
+			<input id="search_input" class="form-control mr-sm-2" placeholder="Search" type="text">
+			<i class="material-icons d-block position-absolute" id="search_icon">search e8b6</i>
+		</form>
+	</div>
+</nav>
+
+<div class="container-fluid py-5 fondo" style="height: 100%;">
+	<div class="container">
+		<div class="h1 text-white text-center">Notes</div>
+		<div class="row">
+			<div class="col-12 col-md-8">
+				<div class="w-100" style="width: 100%; overflow-x: auto; overflow-y: hidden;">
+					<h6 class="text-white text-center">Progress</h6>
+					<canvas id="canvas" style=" width:100%; min-width: 510px;"></canvas>
+				</div>
+			</div>
+			<div class="col-12 col-md-4">
+				<p class="text-white text-center font-weight-bold">Task Pending</p>
+				<ul class="list-group">
+				  <li class="list-group-item d-flex justify-content-between align-items-center activer rounded-0">
+				    Work
+				    <span class="badge badge-primary badge-pill">14</span>
+				  </li>
+				  <li class="list-group-item d-flex justify-content-between align-items-center activer">
+				    Family
+				    <span class="badge badge-primary badge-pill">2</span>
+				  </li>
+				  <li class="list-group-item d-flex justify-content-between align-items-center activer">
+				    University
+				    <span class="badge badge-primary badge-pill">2</span>
+				  </li>
+				  <li class="list-group-item d-flex justify-content-between align-items-center activer rounded-0">
+				    Friends
+				    <span class="badge badge-primary badge-pill">0</span>
+				  </li>
+				</ul>
+				
+			</div>
+		</div>
+	</div>
+</div>
+<div class="container-fluid">
+	<h5 class="text-white pt-1 pb-4 text-center">Latest notes</h5>
+	<div class="container">
+		<div class="row mt-2">
+			<div class="col">
+					<div class="card shadow mb-3 rounded-0" style="background: none;">
+						<h3 class="card-header c-head">Card header</h3>
+						<div style="width:150px; height: 112px; overflow: hidden;" class="mx-auto mt-2">
+							<img style=" width: 100%; display: block; border-radius: 50%;" src="img/people-2563491_1920.jpg" class="mx-auto text-center" alt="Card image">
+						</div>
+						<div class="card-body c-body">
+							<p class="card-text text-justify">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+						</div>
+						<div class="card-footer text-muted c-footer">
+							1 minute ago
+						</div>
+					</div>
+			</div>
+			<div class="col">
+				<div class="card shadow mb-3 rounded-0" style="background: none;">
+					<h3 class="card-header c-head">Card header</h3>
+					<div style="width:150px; height: 112px; overflow: hidden;" class="mx-auto mt-2">
+						<img style=" width: 100%; display: block; border-radius: 50%;" src="img/art-2436545_1280.jpg" class="mx-auto text-center" alt="Card image">
+					</div>
+						<div class="card-body c-body">
+							<p class="card-text text-justify">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+						</div>
+						<div class="card-footer text-muted c-footer">
+							4 hours ago
+						</div>
+				</div>
+			</div>
+			<div class="col">
+					<div class="card shadow mb-3 rounded-0" style="background: none;">
+						<h3 class="card-header c-head">Card header</h3>
+						<div style="width:150px; height: 112px; overflow: hidden;" class="mx-auto mt-2">
+							<img style=" width: 100%; display: block; border-radius: 50%;" src="img/people-2563491_1920.jpg" class="mx-auto text-center" alt="Card image">
+						</div>
+						<div class="card-body c-body">
+							<p class="card-text text-justify">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+						</div>
+						<div class="card-footer text-muted c-footer">
+							3 days ago
+						</div>
+					</div>
+			</div>
+			<div class="col">
+					<div class="card shadow mb-3 rounded-0" style="background: none;">
+						<h3 class="card-header c-head">Card header</h3>
+						<div style="width:150px; height: 112px; overflow: hidden;" class="mx-auto mt-2">
+							<img style=" width: 100%; height: 112px; display: block; border-radius: 50%;" src="img/art-2436545_1920.jpg" class="mx-auto text-center" alt="Card image">
+						</div>
+						<div class="card-body c-body">
+							<p class="card-text text-justify">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+						</div>
+						<div class="card-footer text-muted c-footer">
+							1 week ago
+						</div>
+					</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div class="container">
+	<h5 class="text-white text-center py-2 my-3">Note of Events</h5>
+	<table class="table table-responsive-md">
+	  <thead class="tab-head shadow">
+	    <tr>
+	      <th scope="col" class="border-0 text-white text-center">#</th>
+	      <th scope="col" class="border-0 text-white text-center">Event</th>
+	      <th scope="col" class="border-0 text-white text-center">Date</th>
+	      <th scope="col" class="border-0 text-white text-center">More</th>
+	    </tr>
+	  </thead>
+	  <tbody>
+	    <tr class="text-center">
+	      <th scope="row">1</th>
+	      <td>Birthday</td>
+	      <td>12/23/2018</td>
+	      <td><button class="btn btn-dark py-1 btn-more font-weight-bold" style="box-shadow: none;" data-toggle="modal" data-target="#exampleModal">View</button></td>
+	    </tr>
+		<tr class="text-center">
+	      <th scope="row">2</th>
+	      <td>Mother´s day</td>
+	      <td>10/05/2018</td>
+	      <td><button class="btn btn-dark py-1 btn-more font-weight-bold" style="box-shadow: none;" data-toggle="modal" data-target="#exampleModal">View</button></td>
+	    </tr>
+	    <tr class="text-center">
+	      <th scope="row">3</th>
+	      <td>Independence</td>
+	      <td>05/09/2018</td>
+	      <td><button class="btn btn-dark py-1 btn-more font-weight-bold" style="box-shadow: none;" data-toggle="modal" data-target="#exampleModal">View</button></td>
+	    </tr>
+	   	<tr class="text-center">
+	      <th scope="row">4</th>
+	      <td>Party</td>
+	      <td>02/11/2018</td>
+	      <td><button class="btn btn-dark py-1 btn-more font-weight-bold" style="box-shadow: none;" data-toggle="modal" data-target="#exampleModal">View</button></td>
+	    </tr>
+	   	<tr class="text-center">
+	      <th scope="row">5</th>
+	      <td>Graduate</td>
+	      <td>12/12/2018</td>
+	      <td><button class="btn btn-dark py-1 btn-more font-weight-bold" style="box-shadow: none;" data-toggle="modal" data-target="#exampleModal">View</button></td>
+	    </tr>
+	</tbody>
+	</table>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content shadow rounded-0 border-0" style="background: #002B36;">
+      <div class="modal-header tab-head-dialog rounded-0">
+        <h5 class="modal-title text-white" id="exampleModalLabel">Info</h5>
+        <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true" class="text-white">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+		Write you description here...
+      </div>
+      <div class="modal-footer tab-head-dialog" style="height: 50px;">
+        <button type="button" class="btn border-0 btn-secondary rounded-0 font-weight-bold" data-dismiss="modal" style="background: none; font-size: 0.8em;">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container pb-4">
+	<div class="text-center my-4">
+  <ul class="pagination d-flex justify-content-center">
+    <li class="page-item disabled">
+      <a class="page-link" href="#">&laquo;</a>
+    </li>
+    <li class="page-item active">
+      <a class="page-link" href="#">1</a>
+    </li>
+    <li class="page-item">
+      <a class="page-link" href="#">2</a>
+    </li>
+    <li class="page-item">
+      <a class="page-link" href="#">3</a>
+    </li>
+    <li class="page-item">
+      <a class="page-link" href="#">4</a>
+    </li>
+    <li class="page-item">
+      <a class="page-link" href="#">5</a>
+    </li>
+    <li class="page-item">
+      <a class="page-link" href="#">&raquo;</a>
+    </li>
+  </ul>
+</div>
+</div>
+<div class="py-3">
+	<div class="small text-center">Designed by
+		<a href="#">FlatLand</a>. Coded by
+		<a href="#" target="_blank">FlatLand</a>.</div>
+</div>
+	<script src="js/popper.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/main.js"></script>
+		<script>
+		var MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+		var color = Chart.helpers.color;
+		var barChartData = {
+			labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+			datasets: [{
+				label: 'Dataset 2',
+				backgroundColor: color(window.chartColors.green).alpha(0.4).rgbString(),
+				borderColor: window.chartColors.green,
+				borderWidth: 1,
+				data: [
+					30,
+					56,
+					23,
+					10,
+					100,
+					20,
+					5,50,56,6,23,56
+				]
+			}]
+
+		};
+
+		window.onload = function() {
+			var ctx = document.getElementById('canvas').getContext('2d');
+			window.myBar = new Chart(ctx, {
+				type: 'bar',
+				data: barChartData,
+				options: {
+					responsive: false,
+					legend: {
+						position: "",
+					},
+					title: {
+						display: true,
+						text: ''
+					}
+				}
+			});
+
+		};
+
+		var colorNames = Object.keys(window.chartColors);
+
+	</script>
+</body>
+</html>

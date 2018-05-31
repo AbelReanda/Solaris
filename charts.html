@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta charset="UTF-8">
+	<title>Solar</title>
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/style.css">
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/Chart.bundle.min.js"></script>
+	<script src="js/utils.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-md navbar-dark bg-dark" id="nav-st">
+	<a class="navbar-brand font-weight-bold" href="index.html"><i class="material-icons" style="font-size: 2em; width: 40px;">home e88a</i></a>
+	<button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation" >
+	<span class="material-icons" style="width: 24px;">menu e5d2</span>
+	</button>
+	<div class="collapse navbar-collapse" id="navbarColor02">
+		<ul class="navbar-nav mr-auto">
+			<li class="nav-item">
+				<div class="row no-gutters">
+					<div class="col" data-toggle="tooltip" title="" data-original-title="Notes">
+						<a class="nav-link text-center icon-efect" href="notes.html"><span class="material-icons" style="width: 24px;">event_note e616</span> <span class="sr-only">(current)</span></a>
+					</div>
+					<div class="col" data-toggle="tooltip" title="" data-original-title="Charts">
+						<a class="nav-link text-center icon-efect" href="charts.html"><span class="material-icons" style="width: 24px;">insert_chart e24b</span> <span class="sr-only">(current)</span></a>
+					</div>
+					<div class="col" data-toggle="tooltip" title="" data-original-title="Profile">
+					<a class="nav-link text-center icon-efect" href="profile.html"><span class="material-icons" style="width: 24px;">person e7fd</span> <span class="sr-only">(current)</span></a>
+					</div>
+					<div class="col" data-toggle="tooltip" title="" data-original-title="About">
+						<a class="nav-link text-center icon-efect" href="about.html"><span class="material-icons" style="width: 24px;">info e88e</span> <span class="sr-only">(current)</span></a>
+					</div>
+				</div>
+			</li>
+		</ul>
+		<form class="form-inline my-2 my-lg-0 position-relative" style="overflow: hidden;">
+			<input id="search_input" class="form-control mr-sm-2" placeholder="Search" type="text">
+			<i class="material-icons d-block position-absolute" id="search_icon">search e8b6</i>
+		</form>
+	</div>
+</nav>
+
+<div class="container-fluid py-5 fondo" style="height: 100%;">
+	<div class="container">
+		<div class="h1 text-white text-center">Charts</div>
+		<div class="row">
+			<div class="col-12 col-md-8">
+				<div class="w-100" style="width: 100%; overflow-x: auto; overflow-y: hidden;">
+					<h6 class="text-white text-center">Performance</h6>
+					<canvas id="canvas" style=" width:100%; min-width: 510px;"></canvas>
+				</div>
+			</div>
+			<div class="col-12 col-md-4 mt-4 mt-md-0">
+				<p class="text-white text-center font-weight-bold">Description:</p>
+				<div class="small text-justify"><div><span class="material-icons py-0 text-white mr-1 icon-descrip">explore e87a</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis ipsam, unde illo eius, hic vel, earum labore consequuntur consectetur vitae voluptatibus doloremque laborum. Esse similique officia obcaecati repudiandae, doloremque asperiores.</div><div><span class="material-icons py-0 text-white mr-1 icon-descrip">flag e153</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis ipsam, unde illo eius, hic vel, earum labore consequuntur consectetur vitae voluptatibus doloremque laborum. Esse similique officia obcaecati repudiandae, doloremque asperiores.</div></div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="container">
+	<div class="row">
+		<div class="col-12 col-sm-12 col-md-6 mb-1 mb-md-0">
+			<div class="w-100 customers" style="width: 100%; overflow-x: auto; overflow-y: hidden;">
+				<h6 class="text-white text-center">Customers</h6>
+				<canvas id="customers" class="mx-auto" style=" min-width: 400px; max-width: 400px;"></canvas>
+			</div>
+		</div>
+		<div class="col-12 col-sm-12 col-md-6 mt-5 mt-md-0">
+			<div class="w-100 customers" style="width: 100%; overflow-x: auto; overflow-y: hidden;">
+				<h6 class="text-white text-center">Products</h6>
+				<canvas id="products" class="mx-auto" style=" min-width: 400px; max-width: 400px;"></canvas>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="container mt-5 mb-5">
+	<div class="w-100 customers" style="width: 100%; overflow-x: auto; overflow-y: hidden;">
+		<h6 class="text-white text-center">Other</h6>
+		<canvas id="other" class="mx-auto" style=" min-width: 600px; width: 100%; max-width: 800px;"></canvas>
+	</div>
+</div>
+<div class="container-fluid">
+	<div class="py-4">
+		<div class="small text-center">Designed by
+			<a href="#">FlatLand</a>. Coded by
+			<a href="#" >FlatLand</a>.</div>
+	</div>
+</div>
+
+	<script src="js/popper.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/charts.js"></script>
+</body>
+</html>

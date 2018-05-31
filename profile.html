@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>Solar</title>
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/style.css">
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/Chart.bundle.min.js"></script>
+	<script src="js/utils.js"></script>
+</head>
+<body>
+
+<!-- Modal imgs -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content shadow rounded-0 border-0" style="background: #002B36;">
+      <div class="modal-header tab-head-dialog rounded-0">
+        <h5 class="modal-title text-white" id="exampleModalLabel">Info</h5>
+        <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true" class="text-white">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body p-0" id="modal-body">
+		
+      </div>
+    </div>
+  </div>
+</div>
+
+<nav class="navbar navbar-expand-md navbar-dark bg-dark" id="nav-st">
+	<a class="navbar-brand font-weight-bold" href="index.html"><i class="material-icons" style="font-size: 2em; width: 40px;">home e88a</i></a>
+	<button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation" >
+	<span class="material-icons" style="width: 24px;">menu e5d2</span>
+	</button>
+	<div class="collapse navbar-collapse" id="navbarColor02">
+		<ul class="navbar-nav mr-auto">
+			<li class="nav-item">
+				<div class="row no-gutters">
+					<div class="col" data-toggle="tooltip" title="" data-original-title="Notes">
+						<a class="nav-link text-center icon-efect" href="notes.html"><span class="material-icons" style="width: 24px;">event_note e616</span> <span class="sr-only">(current)</span></a>
+					</div>
+					<div class="col" data-toggle="tooltip" title="" data-original-title="Charts">
+						<a class="nav-link text-center icon-efect" href="charts.html"><span class="material-icons" style="width: 24px;">insert_chart e24b</span> <span class="sr-only">(current)</span></a>
+					</div>
+					<div class="col" data-toggle="tooltip" title="" data-original-title="Profile">
+					<a class="nav-link text-center icon-efect" href="profile.html"><span class="material-icons" style="width: 24px;">person e7fd</span> <span class="sr-only">(current)</span></a>
+					</div>
+					<div class="col" data-toggle="tooltip" title="" data-original-title="About">
+						<a class="nav-link text-center icon-efect" href="about.html"><span class="material-icons" style="width: 24px;">info e88e</span> <span class="sr-only">(current)</span></a>
+					</div>
+				</div>
+			</li>
+		</ul>
+		<form class="form-inline my-2 my-lg-0 position-relative" style="overflow: hidden;">
+			<input id="search_input" class="form-control mr-sm-2" placeholder="Search" type="text">
+			<i class="material-icons d-block position-absolute" id="search_icon">search e8b6</i>
+		</form>
+	</div>
+</nav>
+
+<div class="container-fluid py-5 fondo" style="height: 100%;">
+	<div class="container">
+		<p class="h4 text-white text-center">Profile</p>
+		<div class="container-fluid">
+			<div class="row no-gutters">
+				<div class="col-12 col-md-4 col-lg-3">
+					<div class="mx-auto mb-2 my-0" style="border-radius: 50%; width: 180px; height: 160px; display: block; overflow: hidden;">
+						<img src="img/StockSnap_2OFIOYTTWR.jpg" class="d-block cur-p" alt="" style="width: 180px; height: 160px;" data-toggle="modal" data-target="#exampleModal">
+					</div>
+				</div>
+				<div class="col-12 col-md-8 col-lg-9 d-flex">
+					<div class="list-group w-100 align-self-center">
+					  <div class="list-group-item list-group-item-action active">
+					    Alice Ashton Miley <div class="badge badge-primary float-right"><i class="material-icons p-0 m-0" style="width: 24px;">star e838</i></div>
+					  </div>
+					</div>
+				</div>
+			</div>
+			<form name="profile" method="POST">
+				<div class="row">
+					<div class="col-12 col-md-4 col-lg-3">
+						<ul class="list-group" style="margin-top: 6px;">
+							<li class="list-group-item d-flex justify-content-between align-items-center activer rounded-0 font-weight-bold small">
+								Friends
+								<span class="badge badge-custom badge-pill">28</span>
+							</li>
+							<li class="list-group-item d-flex justify-content-between align-items-center activer rounded-0 font-weight-bold small">
+								Posts
+								<span class="badge badge-custom badge-pill">14</span>
+							</li>
+							<li class="list-group-item d-flex justify-content-between align-items-center activer font-weight-bold small">
+								Photos
+								<span class="badge badge-custom badge-pill">8</span>
+							</li>
+							<li class="list-group-item d-flex justify-content-between align-items-center activer font-weight-bold small">
+								Videos
+								<span class="badge badge-custom badge-pill">4</span>
+							</li>
+						</ul>
+						<!-- redes sociales -->
+						<ul class="list-group list-custom border-0" id="post-side" style="margin-top: 6px;">
+							<li class="list-group-item  active text-white text-center rounded-0 font-weight-bold small">
+								Latest Post
+							</li>
+							<li class="list-group-item border-0 rounded-0 font-weight-bold small p-0">
+								<img src="img/img2.jpeg" alt="" class="d-block w-100" data-toggle="modal" data-target="#exampleModal">
+							</li>
+							<li class="list-group-item font-weight-bold small p-1" style="background: transparent;">
+								<div class="comment">
+									<div class="row no-gutters">
+										<div class="col-2">
+											<img src="img/img3.jpg" alt="" class="d-block" data-toggle="modal" data-target="#exampleModal">
+										</div>
+										<div class="col-10">
+										<div class="row no-gutters">
+											<div class="col-12 py-0" style="height: 17px;">
+												<p class="small font-weight-bold">Kathia</p>
+											</div>
+											<div class="col-12">
+												<p class="small text-justify text-muted" style="padding-right: 1px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum provident quos ut.</p>
+											</div>
+										</div>
+											
+										</div>
+									</div>
+									<div class="row no-gutters">
+										<div class="col-12 position-relative">
+											<input class="form-control form-control-sm profile-input" name="comment" placeholder="Comment:" id="comment_input" spellcheck="false" type="text">
+											<i class="material-icons position-absolute d-block" id="comment_icon">send e163</i>
+										</div>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="col-12 col-md-8 col-lg-9">
+						<p class="h6 text-center mt-3 mb-2 mt-md-0 mb-md-4">Update Profile</p>
+						<div class="row">
+							<div class="col-12 col-lg-6">
+								<div class="row no-gutters ">
+									<div class="col-12 col-sm-2 col-lg-2">
+										<label for="name" class="font-weight-bold text-white" style="font-size: 0.9em;">Name:</label>
+									</div>
+									<div class="col-12 col-sm-10 col-lg-10 p-0 px-sm-3 pl-lg-3 pr-lg-1 position-relative">
+										<input class="form-control form-control-sm profile-input" name="user" placeholder="Name:" id="name" type="text" value="Alice">
+										<i class="position-absolute profile-icon material-icons">person e7fd</i>
+									</div>
+								</div>
+							</div>
+							<div class="col-12 col-lg-6">
+								<div class="row no-gutters">
+									<div class="col-12 col-sm-2 col-lg-2 p-0">
+										<label for="apellido" class="font-weight-bold text-white" style="font-size: 0.9em;">Surname:</label>
+									</div>
+									<div class="col-12 col-sm-10 col-lg-10 p-0 px-sm-3 pl-lg-3 pr-lg-1 position-relative">
+										<input class="form-control form-control-sm profile-input" name="surname" placeholder="Surname:" id="apellido" type="text" value="Ashton Miley">
+										<i class="position-absolute profile-icon material-icons">people e7fb</i>
+									</div>
+								</div>							
+							</div>
+						</div>
+						<!-- Email -->
+						<div class="row my-4">
+							<div class="col-12 col-lg-6">
+								<div class="row no-gutters ">
+									<div class="col-12 col-sm-2 col-lg-2">
+										<label for="email" class="font-weight-bold text-white" style="font-size: 0.9em;">Email:</label>
+									</div>
+									<div class="col-12 col-sm-10 col-lg-10 p-0 px-sm-3 pl-lg-3 pr-lg-1 position-relative">
+										<input class="form-control form-control-sm profile-input" name="email" placeholder="Email:" id="email" type="text" value="ashmiley@gmail.com">
+										<i class="position-absolute profile-icon material-icons">email e0be</i>
+									</div>
+								</div>
+							</div>
+							<div class="col-12 col-lg-6">
+								<div class="row no-gutters">
+									<div class="col-12 col-sm-2 col-lg-2 p-0">
+										<label for="tel" class="font-weight-bold text-white" style="font-size: 0.9em;">Phone:</label>
+									</div>
+									<div class="col-12 col-sm-10 col-lg-10 p-0 px-sm-3 pl-lg-3 pr-lg-1 position-relative">
+										<input class="form-control form-control-sm profile-input" name="phone" placeholder="Tel:" id="tel" type="text" value="45325466">
+										<i class="position-absolute profile-icon material-icons">local_phone e551</i>
+									</div>
+								</div>							
+							</div>
+						</div>
+						<!-- birth from -->
+						<div class="row my-4">
+							<div class="col-12 col-lg-6">
+								<div class="row no-gutters ">
+									<div class="col-12 col-sm-2 col-lg-2">
+										<label for="from" class="font-weight-bold text-white" style="font-size: 0.9em;">From:</label>
+									</div>
+									<div class="col-12 col-sm-10 col-lg-10 p-0 px-sm-3 pl-lg-3 pr-lg-1 position-relative">
+										<input class="form-control form-control-sm profile-input" name="from" placeholder="From:" id="from" type="text" value="Ohio">
+										<i class="position-absolute profile-icon material-icons">insert_photo e251</i>
+									</div>
+								</div>
+							</div>
+							<div class="col-12 col-lg-6">
+								<div class="row no-gutters">
+									<div class="col-12 col-sm-2 col-lg-2 p-0">
+										<label for="birth" class="font-weight-bold text-white" style="font-size: 0.9em;">Birth:</label>
+									</div>
+									<div class="col-12 col-sm-10 col-lg-10 p-0 px-sm-3 pl-lg-3 pr-lg-1 position-relative">
+										<div class="row no-gutters">
+											<div class="col">
+												<input type="text" name="day" class="form-control form-control-sm profile-input-birth w-100" placeholder="Day" maxlength="2" value="13">
+											</div>
+											<div class="col">
+												<input type="text" name="month" class="form-control form-control-sm profile-input-birth w-100" placeholder="Month" maxlength="2" value="12">
+											</div>
+											<div class="col">
+												<input type="text" name="year" class="form-control form-control-sm profile-input-birth w-100" placeholder="Year" maxlength="4" value="1996">
+											</div>
+										</div>
+									</div>
+								</div>							
+							</div>
+						</div>
+						<!-- password -->
+						<div class="row my-4">
+							<div class="col-12 col-lg-6">
+								<div class="row no-gutters">
+									<div class="col-12 col-sm-2 col-lg-2">
+										<label for="password" class="font-weight-bold text-white" style="font-size: 0.9em;">Password:</label>
+									</div>
+									<div class="col-12 col-sm-10 col-lg-10 p-0 px-sm-3 pl-lg-3 pr-lg-1 position-relative">
+										<input class="form-control form-control-sm profile-input" name="password" placeholder="Password:" id="password" type="password" value="password">
+										<i class="position-absolute profile-icon material-icons">vpn_key e0da</i>
+									</div>
+								</div>
+							</div>
+							<div class="col-12 col-lg-6">
+
+							</div>
+						</div>
+						<!-- description -->
+						<div class="row my-4">
+							<div class="col-12">
+								<p class="h6 text-white font-weight-bold">Description</p>
+								<textarea name="description" id="description" cols="30" rows="10" class="form-control profile-input-description w-100">Hi, i am a person who loves the nature, play football soccer, swim in the lake, go walking in the morning and also i love the technology, the last thing is the main thing i love to do.</textarea>
+							</div>
+						</div>
+						<div>
+							<button type="button" class="btn d-block mx-auto btn-save">Save</button>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+
+</div>
+<div class="py-3">
+	<div class="small text-center">Designed by
+		<a href="#">FlatLand</a>. Coded by
+		<a href="#" target="_blank">FlatLand</a>.</div>
+</div>
+
+
+	<script src="js/popper.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>
